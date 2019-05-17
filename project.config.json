@@ -1,0 +1,13 @@
+{
+  "description": "记一下",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram",
+  "appid": "wxcad94b5d0f58dc52",
+  "projectname": "wepymp",
+  "miniprogramRoot": "./dist"
+}
