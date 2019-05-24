@@ -1,0 +1,38 @@
+<!-- 首页-->
+<template>
+  <view class="container">
+    <header></header>
+    <content></content>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+import Content from './components/content'
+import Header from './components/header'
+export default class HomePage extends wepy.page {
+  config = {
+    navigationBarTitleText: '记一下'
+  }
+
+  components = {
+    content: Content,
+    header: Header
+  }
+
+  methods = {}
+
+  events = {}
+
+  watch = {}
+
+  computed = {}
+
+  onLoad() {}
+
+  onShow() {}
+}
+</script>
+
+<style lang='less'>
+</style>

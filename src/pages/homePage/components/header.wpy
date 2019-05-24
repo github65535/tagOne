@@ -1,0 +1,108 @@
+<!-- 首页头部 个人信息 -->
+<template>
+  <view class="headerView">
+    <view class="statistics">
+      <view class="gray">累计</view>
+      <view class="shuju">
+        <view class="red">{{day}}</view>
+        <view class="red">{{sum}}</view>
+      </view>
+      <view class="danwei">
+        <view class="gray">天</view>
+        <view class="gray">条</view>
+      </view>
+    </view>
+    <view class="userInfo">
+      <view class="userHeader">
+        <image src="{{userInfo.headerUrl}}" alt="header"></image>
+      </view>
+      <view class="nickName">
+        <text>{{userInfo.nickName}}</text>
+      </view>
+    </view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class Header extends wepy.component {
+  components = {}
+  data = {
+    day: 8,
+    sum: 25,
+    userInfo: {
+      headerUrl: '../../img/headerImg.png',
+      nickName: 'Madeline'
+    }
+  }
+
+  methods = {}
+
+  events = {}
+
+  watch = {}
+
+  computed = {}
+
+  onLoad() {}
+
+  onShow() {}
+}
+</script>
+
+<style lang='less'>
+.headerView {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 122px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  border: 1px solid rgba(151, 151, 151, 1);
+  flex-flow: row;
+  padding: 12px 21px;
+  .statistics {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 140px;
+    .shuju .danwei {
+      flex-flow: column;
+      justify-content: space-between;
+    }
+    .red {
+      font-size: 35px;
+      color: #d0021b;
+      text-align: right;
+      padding-bottom: 0px;
+    }
+    .gray {
+      font-size: 15px;
+      color: #bfbfbf;
+      padding-top: 21px;
+      display: flex;
+      flex-flow: column;
+    }
+  }
+  .userInfo {
+    text-align: center;
+    .userHeader image {
+      width: 48px;
+      height: 49px;
+      // border:1px solid rgba(151,151,151,1);
+    }
+    .nickName text {
+      width: 74px;
+      height: 21px;
+      font-size: 15px;
+      font-family: PingFangSC-Regular;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 1);
+      line-height: 21px;
+    }
+  }
+}
+</style>
